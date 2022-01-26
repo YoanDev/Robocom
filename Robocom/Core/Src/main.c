@@ -83,6 +83,7 @@ void Tx_Adding_CRC(uint8_t *data, uint32_t len);
 void extractData(char *b);
 uint32_t extractCrc(char *b);
 
+/* Initialize NRF */
 void initNRF(void)
 {
 	NRF24_begin(GPIOB, CSNpin_Pin, CEpin_Pin, hspi1);
@@ -94,6 +95,7 @@ void initNRF(void)
 	//printRadioSettings();
 }
 
+/* Add CRC at the CRC */
 void Tx_Adding_CRC(uint8_t *data, uint32_t len)
 {
 	uint32_t Tx_crc;
@@ -111,6 +113,7 @@ void Tx_Adding_CRC(uint8_t *data, uint32_t len)
 	}
 }
 
+/* Extract CRC in the frame */
 uint32_t extractCrc(char *b)
 {
 	char delim[1] = "|";
@@ -119,6 +122,7 @@ uint32_t extractCrc(char *b)
 	return strtoul(ptr,NULL,10);
 }
 
+/* Extract frame in the frame */
 void extractData(char *b)
 {
 	char delim[1] = "|";
@@ -226,6 +230,7 @@ int main(void)
   xMutex = xSemaphoreCreateMutex();
   Ringbuf_init();
   vTaskStartScheduler();
+
   /* USER CODE END 2 */
 
   //osSemaphoreDef(BinarySem);

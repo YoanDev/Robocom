@@ -1,6 +1,6 @@
-tasks_robocom.c:14:6:Nrf_rx_init	16	static
-tasks_robocom.c:23:6:Nrf_tx_init	16	static
-tasks_robocom.c:32:6:taskNrfRx	48	static
-tasks_robocom.c:77:6:taskNrfTx	56	static
-tasks_robocom.c:101:6:taskUartPc	160	static
-tasks_robocom.c:156:6:taskUartHc12	192	static
+tasks_robocom.c:12:6:Nrf_rx_init	16	static
+tasks_robocom.c:21:6:Nrf_tx_init	16	static
+tasks_robocom.c:30:6:taskNrfRx	48	static
+tasks_robocom.c:75:6:taskNrfTx	56	static
+tasks_robocom.c:99:6:taskUartPc	152	static
+tasks_robocom.c:162:6:taskUartHc12	192	static
